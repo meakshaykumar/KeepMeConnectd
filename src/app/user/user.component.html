@@ -1,0 +1,50 @@
+<div class="container-fluid min-vh-100 user-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 min-vh-100 col-6 typewriter d-flex align-items-center text-center">
+        <p class="my-title"></p>
+      </div>
+      <div class="col-md-1 d-flex align-items-center min-vh-100">
+        <hr class="seperator">
+      </div>
+      <div class="col-md-5 col-6 d-flex align-items-center text-center">
+          <mat-card style="width: 100%;">
+            <mat-card-header>
+              <div mat-card-avatar class="login-header"></div>
+              <mat-card-title class="login-title"><b>Login</b></mat-card-title>
+            </mat-card-header>
+            <hr class="underline">
+            <mat-card-content>
+             <form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <p>
+                <mat-form-field appearance="legacy" class="form-fields">
+                  <mat-label><b>Email</b></mat-label>
+                  <input matInput placeholder="Enter your Email ID" formControlName="email">
+                  <mat-icon matSuffix>account_circle</mat-icon>
+                  <mat-hint><b>Hint: clarivate mail ID</b></mat-hint>
+                  <mat-error *ngIf="loginForm.get('email').hasError('pattern')">Email is not valid</mat-error>
+                </mat-form-field>
+              </p>
+
+              <p>
+                <mat-form-field appearance="legacy" class="form-fields">
+                  <mat-label><b>Password</b></mat-label>
+                  <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password" >
+                  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </button>
+                  <mat-hint><b>Hint: **********</b></mat-hint>
+                </mat-form-field>
+              </p>
+             </form>
+            </mat-card-content>
+            <br>
+            <hr class="underline">
+            <mat-card-actions class="mb-3">
+              <button type="submit" (click)="onSubmit()" class="login-btn" mat-raised-button [disabled]="loginForm.invalid">Login</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+    </div>
+  </div>
+</div> 

@@ -1,0 +1,39 @@
+.user-background{
+  background-image:linear-gradient(rgba(0,0,0,0.67),rgba(0,0,0,0.8)),url("../../assets/images/user-background.jpg");
+  background-size: cover;
+}
+.typewriter{
+  color: white;
+  font-size: 45px;
+}
+.seperator{
+  background-color:white;
+  width: 2px;
+  height: 400px;
+}
+.login-header{
+  background-image: url("../../assets/icons/login.png");
+  background-size: cover;
+}
+.underline{
+  height: 1px;
+  width: 100%;
+  background-color: gray;
+}
+.login-title{
+  padding-top: 2px;
+}
+.form-fields{
+  width: 70%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.labels{
+  font-weight: 500;
+}
+.login-btn{
+  width: 50%;
+  background-color: green;
+  color: white;
+  text-transform: uppercase;
+}
