@@ -17,9 +17,9 @@
             <mat-card-content>
              <form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <p>
-                <mat-form-field appearance="legacy" class="form-fields">
+                <mat-form-field appearance="outline" class="form-fields">
                   <mat-label><b>Email</b></mat-label>
-                  <input matInput placeholder="Enter your Email ID" formControlName="email">
+                  <input matInput placeholder="Enter your Email ID" formControlName="email" autocomplete="off">
                   <mat-icon matSuffix>account_circle</mat-icon>
                   <mat-hint><b>Hint: clarivate mail ID</b></mat-hint>
                   <mat-error *ngIf="loginForm.get('email').hasError('pattern')">Email is not valid</mat-error>
@@ -27,7 +27,7 @@
               </p>
 
               <p>
-                <mat-form-field appearance="legacy" class="form-fields">
+                <mat-form-field appearance="outline" class="form-fields">
                   <mat-label><b>Password</b></mat-label>
                   <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password" >
                   <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
