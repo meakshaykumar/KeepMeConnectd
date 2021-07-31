@@ -6,12 +6,12 @@ footer{
 
 .foot{
     background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
-    background: #000000;
+    background: #0000002f;
 }
 
 .footer-icons{
     font-size: 18px;
-    color: white;
+    /* color: white; */
 }
 .name{
     font-size: 14px;
@@ -26,4 +26,49 @@ footer{
 
 .footer-icons:hover{
     color: yellow;
+}
+
+.rainbow{
+    font-family: 'Permanent Marker', cursive;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.logo:hover{
+    color: black;
+}
+
+.c1{
+    color: violet;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c2{
+    color: indigo;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c3{
+    color: blue;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c4{
+    color: green;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c5{
+    color: yellow;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c6{
+    color: orange;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
+}
+.c7{
+    color: red;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+    padding-right: 3px;
 }
