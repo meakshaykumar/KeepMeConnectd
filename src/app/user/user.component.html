@@ -49,40 +49,5 @@
         </mat-card>
       </div>
     </div>
-    <div class="container d-flex justify-content-center mt-5 mb-5">
-      <mat-card style="width: 40%; box-shadow: 0 14px 18px 10px rgba(0,0,0,0.2);">
-        <mat-card-header class="row text-center">
-          <h5 style="font-weight: bolder;">Don't see your favourite group?
-          </h5>
-          <small>submit a request to create a new one</small>
-        </mat-card-header>
-        <mat-card-content class="text-center mt-5">
-          <form>
-            <p>
-              <mat-form-field appearance="outline" style="width: 80%;">
-                <mat-label><b>Name</b></mat-label>
-                <input matInput placeholder="Enter the Name of Group" autocomplete="off">
-                <mat-icon matSuffix>record_voice_over</mat-icon>
-              </mat-form-field>
-            </p>
-
-            <p>
-              <mat-form-field appearance="outline" style="width: 80%;">
-                <mat-label><b>Describe your group</b></mat-label>
-                <textarea matInput [(ngModel)]="value" [ngModelOptions]="{standalone: true}"
-                  style="height: 150px;"></textarea>
-                <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                  <mat-icon>close</mat-icon>
-                </button>
-              </mat-form-field>
-            </p>
-          </form>
-        </mat-card-content>
-        <mat-card-actions class="mb-3 text-center">
-          <button type="submit" mat-raised-button class="login-btn">Submit</button>
-        </mat-card-actions>
-      </mat-card>
-
-    </div>
   </div>
 </div>
