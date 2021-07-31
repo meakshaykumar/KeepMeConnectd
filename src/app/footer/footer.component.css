@@ -1,0 +1,29 @@
+footer{
+    position:absolute;
+    bottom: auto;
+    width: 100%;
+}
+
+.foot{
+    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
+    background: #000000;
+}
+
+.footer-icons{
+    font-size: 18px;
+    color: white;
+}
+.name{
+    font-size: 14px;
+    color: white;
+    font-weight: lighter;
+}
+
+.name h4{
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+
+.footer-icons:hover{
+    color: yellow;
+}

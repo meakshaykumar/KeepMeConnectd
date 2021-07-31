@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Typewriter from 't-writer.js';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -9,8 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class UserComponent implements OnInit {
   hide = true;
+  value = '';
   loginForm: FormGroup;
-  constructor(public fb: FormBuilder) {
+  constructor(public fb: FormBuilder, private router :Router) {
     this.createLoginForm();
    }
 
@@ -47,5 +49,6 @@ export class UserComponent implements OnInit {
   onSubmit(){
     let crendentials = this.loginForm.value;
     this.loginForm.reset();
+    this.router.navigate(['/home'])
   }
 }
