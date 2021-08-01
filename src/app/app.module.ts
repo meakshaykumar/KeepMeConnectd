@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
 
   providers: [],

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import Typewriter from 't-writer.js';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user',
@@ -12,7 +14,8 @@ export class UserComponent implements OnInit {
   hide = true;
 
   loginForm: FormGroup;
-  constructor(public fb: FormBuilder, private router :Router) {
+  displayError: boolean;
+  constructor(public fb: FormBuilder, private router :Router, private userService:UserService, private _snackBar: MatSnackBar) {
     this.createLoginForm();
    }
 
@@ -48,7 +51,19 @@ export class UserComponent implements OnInit {
 
   onSubmit(){
     let crendentials = this.loginForm.value;
-    this.loginForm.reset();
-    this.router.navigate(['/home'])
+    let params = {
+      "email":crendentials.email,
+      "password":crendentials.password
+    }
+    this.userService.authenticateUser(params).subscribe((res:any)=>{
+      if(res === "Success"){
+        this.loginForm.reset();
+        this.router.navigate(['/home'])
+        this.displayError = false
+      }
+      else{
+        this.displayError = true
+      }
+    })
   }
 }

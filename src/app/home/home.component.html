@@ -14,8 +14,8 @@
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.vCcyqctEX2NU0zD1sizopwHaDd%26pid%3DApi&f=1"
                 class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>{{groups[0]?.groupName}}</h5>
+                <p>{{groups[0]?.groupDescription}}</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -23,8 +23,8 @@
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Hi5EeLudlc2QSKMUgiaSfAHaEK%26pid%3DApi&f=1"
                 class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
+                <h5>{{groups[3]?.groupName}}</h5>
+                <p>{{groups[3]?.groupDescription}}</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -32,8 +32,8 @@
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.nupunWJpMXKIxYgiR05J3QHaDd%26pid%3DApi&f=1"
                 class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
+                <h5>{{groups[7]?.groupName}}</h5>
+                <p>{{groups[7]?.groupDescription}}</p>
             </div>
         </div>
     </div>
@@ -67,12 +67,12 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3" *ngFor="let g of groupA">
                                             <div class="item-box-blog">
                                                 <div class="item-box-blog-image">
                                                     <!--Date-->
                                                     <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
+                                                            class="mon">{{g.createdDate | date}}</span> </div>
                                                     <!--Image-->
                                                     <figure> <img alt=""
                                                             src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG9ncmFwaHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
@@ -82,7 +82,7 @@
                                                     <!--Heading-->
                                                     <div class="item-box-blog-heading">
                                                         <a href="#" tabindex="0">
-                                                            <h5>Photography</h5>
+                                                            <h5>{{g.groupName}}</h5>
                                                         </a>
                                                     </div>
                                                     <!--Data-->
@@ -92,122 +92,7 @@
                                                     </div>
                                                     <!--Text-->
                                                     <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.B-Uv_H4_VJxCpcio69GDFQHaEm%26pid%3DApi&f=1">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>Fun Friday Activites</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.B-Uv_H4_VJxCpcio69GDFQHaEm%26pid%3DApi&f=1">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>Fun Friday Activites</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.FlVN2CoeiaA89-nWS-hDOQHaE8%26pid%3DApi&f=1">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>QUIZ</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
+                                                        <p>{{g.groupDescription}}</p>
                                                     </div>
                                                     <div class="mt"> <a href="#" tabindex="0"
                                                             class="btn bg-blue-ui white read">read more</a> </div>
@@ -221,22 +106,22 @@
                                 <!--.item-->
                                 <div class="carousel-item ">
                                     <div class="row">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3" *ngFor="let g of groupB">
                                             <div class="item-box-blog">
                                                 <div class="item-box-blog-image">
                                                     <!--Date-->
                                                     <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
+                                                            class="mon">{{g.createdDate | date}}</span> </div>
                                                     <!--Image-->
                                                     <figure> <img alt=""
-                                                            src="https://cdn.pixabay.com/photo/2017/02/08/14/25/computer-2048983_960_720.jpg">
+                                                            src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGhvdG9ncmFwaHl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
                                                     </figure>
                                                 </div>
                                                 <div class="item-box-blog-body">
                                                     <!--Heading-->
                                                     <div class="item-box-blog-heading">
                                                         <a href="#" tabindex="0">
-                                                            <h5>News Title</h5>
+                                                            <h5>{{g.groupName}}</h5>
                                                         </a>
                                                     </div>
                                                     <!--Data-->
@@ -246,122 +131,7 @@
                                                     </div>
                                                     <!--Text-->
                                                     <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://cdn.pixabay.com/photo/2017/02/08/14/25/computer-2048983_960_720.jpg">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>News Title</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://cdn.pixabay.com/photo/2017/02/08/14/25/computer-2048983_960_720.jpg">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>News Title</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
-                                                    </div>
-                                                    <div class="mt"> <a href="#" tabindex="0"
-                                                            class="btn bg-blue-ui white read">read more</a> </div>
-                                                    <!--Read More Button-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="item-box-blog">
-                                                <div class="item-box-blog-image">
-                                                    <!--Date-->
-                                                    <div class="item-box-blog-date bg-blue-ui white"> <span
-                                                            class="mon">Augu 01</span> </div>
-                                                    <!--Image-->
-                                                    <figure> <img alt=""
-                                                            src="https://cdn.pixabay.com/photo/2017/02/08/14/25/computer-2048983_960_720.jpg">
-                                                    </figure>
-                                                </div>
-                                                <div class="item-box-blog-body">
-                                                    <!--Heading-->
-                                                    <div class="item-box-blog-heading">
-                                                        <a href="#" tabindex="0">
-                                                            <h5>News Title</h5>
-                                                        </a>
-                                                    </div>
-                                                    <!--Data-->
-                                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                                        <p><i class="fa fa-user-o"></i> Admin, <i
-                                                                class="fa fa-comments-o"></i> Comments(3)</p>
-                                                    </div>
-                                                    <!--Text-->
-                                                    <div class="item-box-blog-text">
-                                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit
-                                                            amet, consectetuer adipiscing. Lorem ipsum dolor sit amet,
-                                                            adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem
-                                                            ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum
-                                                            dolor.</p>
+                                                        <p>{{g.groupDescription}}</p>
                                                     </div>
                                                     <div class="mt"> <a href="#" tabindex="0"
                                                             class="btn bg-blue-ui white read">read more</a> </div>
