@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GroupDescComponent } from './shared/groupDescPopOver/groupdesc.component';
+import { GroupsComponent } from './groups/groups.component';
+import { EventsComponent } from './events/events.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { GroupDescComponent } from './shared/groupDescPopOver/groupdesc.componen
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    GroupDescComponent
+    GroupDescComponent,
+    GroupsComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,

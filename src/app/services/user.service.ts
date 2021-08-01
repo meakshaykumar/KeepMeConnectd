@@ -52,4 +52,16 @@ export class UserService {
   getAllGroups(){
     return this.http.get(this.baseURL+'allgroups');
   }
+
+  getGroupEvents(params){
+    return this.http.get(this.baseURL+'groupEvents/'+params);
+  }
+
+  getGroupMembers(params){
+    return this.http.get(this.baseURL+'groupUsers/'+params);
+  }
+
+  joinGroup(params){
+    return this.http.post(this.baseURL+'joinGroup',params);
+  }
 }
