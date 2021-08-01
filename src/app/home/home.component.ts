@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { UserService } from '../services/user.service';
+import { GroupDescComponent } from '../shared/groupDescPopOver/groupdesc.component';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,7 @@ export class HomeComponent implements OnInit {
   groups:any;
   groupA: any;
   groupB: any;
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private _modalService:MatDialog) { }
 
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -26,6 +28,14 @@ export class HomeComponent implements OnInit {
         this.groupB = this.groups.slice(4,8)
       }
     )
+  }
+
+  openDetails(data){
+    this._modalService.open(GroupDescComponent, {
+      width: '1200px',
+      height: '500px',
+      data: data
+    });
   }
 
 }

@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularMaterialModule } from './shared/angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogModule} from "@angular/material/dialog";
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { GroupDescComponent } from './shared/groupDescPopOver/groupdesc.component';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     UserComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GroupDescComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule,
   ],
 
   providers: [],
