@@ -80,6 +80,7 @@ import { UserService } from 'src/app/services/user.service';
       }
       this.userService.joinGroup(params).subscribe(res =>{
         console.log(res);
+        this.groupMembers();
         this.getUserGroups();
       })
     }
