@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   groupB: any;
   constructor(private userService:UserService, private _modalService:MatDialog) { }
 
+
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     // this.userService.getUserName(this.currentUser.email).subscribe(res=> this.userName = res);
