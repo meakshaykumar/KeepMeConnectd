@@ -1,57 +1,57 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6" style="background-image:linear-gradient(rgba(0,0,0,0.67),rgba(0,0,0,0.8)),url('../../../assets/images/{{data2.groupId}}.jpg');
-    height:500px;color: white;">
-      <h4 class="pt-5 pl-5"><b>{{data2.groupName}}</b></h4>
-      <h6 class="pl-5">{{data2.groupDescription}}</h6>
-      <button class="ml-5 mt-3" (click)="joinGroup()" [hidden]='inGroup'
-        style="background-color:rgba(0, 128, 0, 0.726); color: white;" mat-raised-button>
-        <i class="fa fa-plus" style="margin-right: 1px;" aria-hidden="true"></i> Join Group</button>
-      <button class="ml-5 mt-3" (click)="joinGroup()" *ngIf='inGroup' [disabled]='inGroup'
-        style="background-color:rgba(0, 128, 0, 0.267); color: white;" mat-raised-button>
-        <i class="fa fa-check" aria-hidden="true"></i> Joined</button>
-      <h6 class="pl-5 pt-3">Members:</h6>
-      <div class="ml-4 mt-3 row">
-        <ul class="user-avatars">
-          <li *ngFor="let member of allMembers">
-            <img #tooltip="matTooltip" matTooltip="{{member.name}}" style="height: 28px; width: 30px;"
-              src="../../../assets/icons/user.png">
-          </li>
-        </ul>
-      </div>
+    <div class="col-md-6"
+   style="background-image:linear-gradient(rgba(0,0,0,0.67),rgba(0,0,0,0.8)),url('../../../assets/images/{{data2.groupId}}.jpg');
+    height:500px;color: white; background-size: cover;">
+    <h4 class="pt-5 pl-5"><b>{{data2.groupName}}</b></h4>
+    <h6 class="pl-5">{{data2.groupDescription}}</h6>
+    <button class="ml-5 mt-3"  (click) = "joinGroup()" [hidden] = 'inGroup'
+    style="background-color:rgba(0, 128, 0, 0.726); color: white;" mat-raised-button>
+      <i class="fa fa-plus" style="margin-right: 1px;" aria-hidden="true"></i> Join Group</button>
+      <button class="ml-5 mt-3"  (click) = "joinGroup()" *ngIf = 'inGroup' [disabled] = 'inGroup'
+    style="background-color:rgba(0, 128, 0, 0.267); color: white;" mat-raised-button>
+    <i class="fa fa-check" aria-hidden="true"></i> Joined</button>
+    <h6 class="pl-5 pt-3">Members:</h6>  
+    <div class="ml-4 mt-3 row">
+      <ul class="user-avatars">
+        <li *ngFor="let member of allMembers">
+          <img #tooltip="matTooltip"
+        matTooltip="{{member.name}}"
+        style="height: 28px; width: 30px;" src="../../../assets/icons/user.png">
+        </li>
+      </ul>
     </div>
-    <div class="col-md-6">
-      <h5 class="pl-3">Events Available</h5>
-      <mat-card class="example-card" style="height: 170px;" *ngFor="let event of events">
-        <div class="row">
-          <div class="col-md-4">
-            <mat-card-header>
-              <mat-card-title><b>{{event.eventName}}</b></mat-card-title>
-              <mat-card-subtitle class="time">{{event.eventTime}} {{event.eventTimeTimezone}}</mat-card-subtitle>
-              <mat-card-subtitle class="pl-2"><small><i class="fa fa-user" style="font-size: 16px;"
-                    aria-hidden="true"></i>: {{event.maxParticipants}}</small></mat-card-subtitle>
-            </mat-card-header>
-          </div>
-          <div class="col-md-8">
-            <mat-card-content>
-              <div class="row">
-                <p>
-                  {{event.eventDescription}}
-                </p>
-              </div>
-              <div class="row pl-2">
-                <div class="participate-btn" [hidden]='registeredEvent' (click)="joinEvent(event)">
+  </div>
+  <div class="col-md-6">
+    <h5 class="pl-3">Events Available</h5>
+    <mat-card class="example-card" style="height: 170px;" *ngFor = "let event of events">
+      <div class="row">
+        <div class="col-md-4">
+          <mat-card-header>
+            <mat-card-title><b>{{event.eventName}}</b></mat-card-title>
+            <mat-card-subtitle class="time">{{event.eventTime}} {{event.eventTimeTimezone}}</mat-card-subtitle>
+            <mat-card-subtitle class="pl-2"><small><i class="fa fa-user" style="font-size: 16px;" aria-hidden="true"></i>: {{event.maxParticipants}}</small></mat-card-subtitle>
+          </mat-card-header>
+        </div>
+        <div class="col-md-8">
+          <mat-card-content>
+            <div class="row">
+              <p>
+                {{event.eventDescription}}
+              </p>
+            </div>
+            <div class="row pl-2">
+                <div class="participate-btn" [hidden] = 'registeredEvent' (click)="joinEvent(event)">
                   <small> <i class="fa fa-plus" aria-hidden="true"></i> Participate</small>
                 </div>
-                <div class="participate-btn-disabled" *ngIf='registeredEvent' (click)="joinEvent(event)"
-                  [disabled]='registeredEvent' style="background-color:rgba(0, 128, 0, 0.267) ;">
+                <div class="participate-btn-disabled" *ngIf = 'registeredEvent' (click)="joinEvent(event)" [disabled] = 'registeredEvent' style="background-color:rgba(0, 128, 0, 0.267) ;">
                   <small> <i class="fa fa-check" aria-hidden="true"></i> Enrolled</small>
                 </div>
-              </div>
-            </mat-card-content>
-          </div>
+            </div>
+          </mat-card-content>
         </div>
-      </mat-card>
-    </div>
+      </div>
+    </mat-card>
+  </div>
   </div>
 </div>

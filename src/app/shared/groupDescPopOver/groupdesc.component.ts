@@ -30,7 +30,7 @@ import { UserService } from 'src/app/services/user.service';
     this.getEvents();
     this.getUserEvents();
     this.groupMembers();
-    
+    console.log(this.data2.groupId)
   }
 
   private getUserGroups(){
