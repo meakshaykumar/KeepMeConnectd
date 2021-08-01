@@ -41,8 +41,11 @@
               </p>
             </div>
             <div class="row pl-2">
-                <div class="participate-btn">
+                <div class="participate-btn" [hidden] = 'registeredEvent' (click)="joinEvent(event)">
                   <small> <i class="fa fa-plus" aria-hidden="true"></i> Participate</small>
+                </div>
+                <div class="participate-btn-disabled" *ngIf = 'registeredEvent' (click)="joinEvent(event)" [disabled] = 'registeredEvent' style="background-color:rgba(0, 128, 0, 0.267) ;">
+                  <small> <i class="fa fa-check" aria-hidden="true"></i> Enrolled</small>
                 </div>
             </div>
           </mat-card-content>

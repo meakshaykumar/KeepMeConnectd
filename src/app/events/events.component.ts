@@ -8,6 +8,7 @@ import { UserService } from '../services/user.service';
 })
 export class EventsComponent implements OnInit {
   currentUser: any;
+  userEvents: any;
 
   constructor(private userService:UserService) { }
 
@@ -15,7 +16,8 @@ export class EventsComponent implements OnInit {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     this.userService.getUserEvents(this.currentUser.email).subscribe((res)=>{
-      console.log(res);
+      this.userEvents = res;
+      console.log(this.userEvents);
     })
   }
 

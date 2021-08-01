@@ -39,8 +39,8 @@ export class UserService {
     );
   }
 
-  getUserName(params){
-    return this.http.get(this.baseURL+'username/'+params,requestOptions);
+  getUser(params){
+    return this.http.get(this.baseURL+'userData/'+params);
   }
 
   logOut(){
@@ -62,7 +62,7 @@ export class UserService {
   }
 
   joinGroup(params){
-    return this.http.post(this.baseURL+'joinGroup',params);
+    return this.http.post(this.baseURL+'joinGroup',params,requestOptions);
   }
 
   getUserGroups(params){
@@ -71,5 +71,9 @@ export class UserService {
 
   getUserEvents(params){
     return this.http.get(this.baseURL+'userEvents/'+params);
+  }
+
+  participateInEvent(params){
+    return this.http.post(this.baseURL+"eventRegister",params,requestOptions);
   }
 }

@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.userService.getUserName(this.currentUser.email).subscribe(res=> this.userName = res);
+    // this.userService.getUserName(this.currentUser.email).subscribe(res=> this.userName = res);
 
     this.userService.getAllGroups().subscribe(
       (res)=>{

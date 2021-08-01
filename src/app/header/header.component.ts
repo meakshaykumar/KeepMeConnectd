@@ -9,12 +9,12 @@ import { UserService } from '../services/user.service';
 })
 export class HeaderComponent implements OnInit {
   currentUser: any;
-  userName: Object;
+  userName: any;
   constructor(private router: Router, private userService:UserService) { }
 
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.userService.getUserName(this.currentUser.email).subscribe(res=> this.userName = res);
+    this.userService.getUser(this.currentUser.email).subscribe(res=> this.userName = res);
   }
  
   logout(){
